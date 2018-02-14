@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Demo SignalR Simple App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/bootstrap.css" />
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Demo SignalR Simple App</a>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div id="entrance" class="m-2">
+                    <form class="form-inline" action="#">
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="name" placeholder="請輸入您的名稱" autofocus>
+                        </div>
+                        <button class="btn btn-primary ml-2" onclick="continueToChat()">送出</button>
+                    </form>
+                </div>
+                <div id="chat" class="m-2" style="display: none">
+                    <h3>
+                        Hello, <span id="your-name"></span>
+                    </h3>
+                    <form class="form-inline" id="frm-send-message" action="#">
+                        <input type="text" class="form-control" id="message" placeholder="請輸入要傳送的訊息">
+                        <button class="btn btn-primary ml-2" type="submit" id="send">送出</button>
+                    </form>
+
+                    <div class="card mt-2 mb-2">
+                        <div class="card-body">
+                            <ul id="messages"></ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/signalr-client-1.0.0-alpha2-final.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
